@@ -153,24 +153,6 @@ async function diagnose(images) {
 
 ---
 
-## Repository Structure
-
-```
-canine-posture-pipeline/
-├── training/
-│   ├── Mobile-NET_71_images.ipynb       # Single-run training
-│   ├── Mobile-NET_2_71_images.ipynb     # 5-fold CV
-│   └── cattle_validation.ipynb          # Architecture validation
-├── deployment/
-│   ├── model_conversion.py              # Keras → TFJS
-│   └── model_script.js                  # Browser inference
-├── data/
-│   └── labelled_dataset.csv             # 71-image dataset metadata
-└── README.md
-```
-
----
-
 ## Future Roadmap
 
 ### Phase 1: Data Collection (6-12 months)
