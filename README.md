@@ -215,10 +215,8 @@ async function diagnose(images) {
 ### Training
 ```bash
 # Open Jupyter notebook
-jupyter notebook training/Mobile-NET_2_71_images.ipynb
+jupyter notebook Training_evaluation.ipynb
 
-# Or run 5-fold CV
-python train.py --dataset data/labelled_dataset.csv --folds 5
 ```
 
 ### Model Conversion
@@ -230,48 +228,6 @@ tensorflowjs_converter \
   web_model/
 ```
 
-### Browser Deployment
-```javascript
-// Load model in Flutter web app
-const model = await tf.loadGraphModel('web_model/model.json');
-
-// Run inference
-const result = await diagnose([img1, img2, img3, img4]);
-console.log(result); // { diagnosis: 'Normal', confidence: 75 }
-```
-
----
-
-## Citations & References
-
-**MobileNetV2**: Sandler et al. (2018) - "MobileNetV2: Inverted Residuals and Linear Bottlenecks"
-
-**Transfer Learning**: Pan & Yang (2010) - "A Survey on Transfer Learning"
-
-**Model Deployment**: TensorFlow.js Documentation - tfjs.org
-
----
-
-## License
-
-MIT License - See LICENSE file for details
-
----
-
-## Contact
-
-For questions about the model pipeline or collaboration opportunities:
-- **Repository**: [github.com/yourname/canine-posture-pipeline]
-- **Email**: your.email@domain.com
-
----
-
-## Acknowledgments
-
-Special thanks to:
-- Anthropic Claude for ML architecture consultation and debugging
-- Veterinary professionals who provided expert labels
-- Open-source communities (TensorFlow, Keras, TensorFlow.js)
 
 ---
 
